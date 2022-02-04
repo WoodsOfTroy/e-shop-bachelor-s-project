@@ -1,0 +1,45 @@
+<header class="header">
+  <h1 class="header__title">кошик товарів</h1>
+</header>
+<section class="card">
+  <div class="container">
+    <ng-container *ngIf="productList.length === 0">
+      <div class="card__empty">
+        <h1 class="card__empty-title">Кошик порожій</h1>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="productList.length > 0">
+      <div class="card__list">
+        <ng-container *ngFor="let product of productList">
+          <mat-card class="card__item">
+            <mat-card-title class="card__item-title"
+              >{{ product.group }} - {{ product.album }}</mat-card-title
+            >
+            <mat-card-subtitle class="card__item-subtitle"
+              >{{ product.price }} грн.</mat-card-subtitle
+            >
+            <mat-card-content>
+              <button
+                mat-stroked-button
+                class="delete-btn"
+                (click)="removeItemFromCard(product)"
+              >
+                Вилучити
+              </button>
+            </mat-card-content>
+            <img mat-card-md-image src="{{ product.img }}" />
+          </mat-card>
+        </ng-container>
+        <button mat-stroked-button class="card-btn" routerLink="">
+          Продовжити покупку
+        </button>
+        <button mat-stroked-button class="card-btn" (click)="emptyFromCard()">
+          Очистити кошик
+        </button>
+        <button mat-raised-button class="succusess-btn" routerLink="/succusess">
+          Підтвердити замовлення
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</section>

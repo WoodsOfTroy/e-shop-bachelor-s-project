@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+  <div class="product">
+    <ng-container *ngFor="let product of productList">
+      <mat-card class="product__card">
+        <mat-card-title-group>
+          <mat-card-title class="product__title"
+            >{{ product.group }} - {{ product.album }}</mat-card-title
+          >
+          <mat-card-subtitle class="product__subtitle">{{
+            product.type
+          }}</mat-card-subtitle>
+          <img class="product__img" mat-card-lg-image src="{{ product.img }}" />
+        </mat-card-title-group>
+        <mat-card-content class="product__buy">
+          <div class="product__price">{{ product.price }} грн.</div>
+          <button
+            class="product__btn"
+            mat-raised-button
+            (click)="addToCard(product)"
+          >
+            Купити
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>
+<app-footer></app-footer>

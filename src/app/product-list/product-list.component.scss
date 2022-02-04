@@ -1,0 +1,45 @@
+.container {
+  margin: 0 90px;
+}
+.product {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__card {
+    max-width: 400px;
+    margin-bottom: 20px !important;
+    margin: 0 auto;
+  }
+  &__price {
+    display: inline-block;
+    margin-top: 10px !important;
+  }
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  &__img {
+    margin-left: 20px;
+  }
+  &__btn {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    margin: 0 10px;
+  }
+  .product {
+    &__card {
+      max-width: 280px;
+    }
+    &__img {
+      max-width: 100px;
+    }
+    &__title {
+      font-size: 1em;
+    }
+  }
+}

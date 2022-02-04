@@ -1,0 +1,145 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 81px;
+  background: #272727;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  justify-content: center;
+  &__title {
+    font-family: "Roboto Bold";
+    align-self: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+  }
+}
+
+.mat-badge-content {
+  background-color: #e20000;
+  width: 28px;
+  height: 28px;
+  font-size: 1em;
+}
+.mat-badge-large.mat-badge-overlap.mat-badge-after .mat-badge-content {
+  right: -38px;
+  top: -3px;
+}
+.message {
+  position: absolute;
+  right: 80px;
+  &__icon-shopping {
+    cursor: pointer;
+    transition: 500ms;
+    margin-right: -8px;
+  }
+  &__title {
+    width: 156px;
+    height: 18px;
+    margin: 15px;
+
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+  &__box {
+    position: absolute;
+    top: 64px;
+    right: -64px;
+    width: 347px;
+    background: #ffffff;
+    border: 1px solid #c6c6c6;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 6px rgb(0 0 0 / 25%);
+  }
+  &__box :last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &__content {
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+  }
+  &__container {
+    transition: 500ms;
+  }
+  &__container:hover {
+    background-color: #a1ccff;
+  }
+  &__box-triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -20px;
+    right: 52px;
+    bottom: 170px;
+    border: 20px solid transparent;
+    border-top: 0;
+    border-bottom: 20px solid white;
+  }
+}
+.fa,
+.fas {
+  font-weight: 900;
+  font-size: 44px;
+  color: white;
+}
+hr {
+  background: #e5e5e5;
+  height: 0px;
+  border: 1px solid #e5e5e5;
+}
+
+.photo-container {
+  display: none;
+}
+.profile-photo {
+  width: 3rem;
+  height: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .message {
+    position: relative;
+    right: 0;
+    margin-right: 15px;
+  }
+
+  .photo-container {
+    display: block;
+  }
+  .header {
+    justify-content: space-around;
+    &__title {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media screen and (max-width: 1121px) {
+  .message {
+    &__box {
+      right: -75px;
+    }
+    &__box-triangle {
+      left: 242px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .message {
+    &__box {
+      right: -65px;
+    }
+    &__box-triangle {
+      left: 252px;
+    }
+  }
+}
