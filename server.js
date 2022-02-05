@@ -7,10 +7,12 @@ const app = express();
 
 app.use(compression());
 
-app.use(express.static(path.join(__dirname, "dist/e-shop-bachelor-project")));
+app.use(express.static(path.join(__dirname, "dist/e-shop-bachelor-s-project")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/e-shop-bachelor-project/index.html"));
+  res.sendFile(
+    path.join(__dirname, "dist/e-shop-bachelor-s-project/index.html")
+  );
 });
 
 const port = process.env.PORT || 3000;
