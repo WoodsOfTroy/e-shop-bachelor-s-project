@@ -30,15 +30,22 @@
             <img mat-card-md-image src="{{ product.img }}" />
           </mat-card>
         </ng-container>
-        <button mat-stroked-button class="card-btn" routerLink="">
-          Продовжити покупку
-        </button>
-        <button mat-stroked-button class="card-btn" (click)="emptyFromCard()">
-          Очистити кошик
-        </button>
-        <button mat-raised-button class="succusess-btn" routerLink="/succusess">
-          Підтвердити замовлення
-        </button>
+        <strong>Загальна сумма: {{ totalPrice }}грн.</strong>
+        <div class="card__buttons">
+          <button mat-stroked-button class="card-btn" routerLink="">
+            Продовжити покупку
+          </button>
+          <button mat-stroked-button class="card-btn" (click)="emptyFromCard()">
+            Очистити кошик
+          </button>
+          <button
+            mat-raised-button
+            class="succusess-btn"
+            routerLink="/succusess"
+          >
+            Підтвердити замовлення
+          </button>
+        </div>
       </div>
     </ng-container>
   </div>
