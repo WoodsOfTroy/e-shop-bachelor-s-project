@@ -13,7 +13,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SuccusessComponent } from './succusess/succusess.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, ProductListComponent, SuccusessComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    ProductListComponent,
+    SuccusessComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "0e274482-9b74-4c36-97c5-050c44504cc2"
+    "analytics": "241b313e-9203-4c29-95be-bf5d899fdda3"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "e-shop-bachelor-project": {
+    "e-shop-bachelor-s-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/e-shop-bachelor-project",
+            "outputPath": "dist/e-shop-bachelor-s-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "e-shop-bachelor-project:build:production"
+              "browserTarget": "e-shop-bachelor-s-project:build:production"
             },
             "development": {
-              "browserTarget": "e-shop-bachelor-project:build:development"
+              "browserTarget": "e-shop-bachelor-s-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "e-shop-bachelor-project:build"
+            "browserTarget": "e-shop-bachelor-s-project:build"
           }
         },
         "test": {
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "e-shop-bachelor-project"
+  "defaultProject": "e-shop-bachelor-s-project"
 }
