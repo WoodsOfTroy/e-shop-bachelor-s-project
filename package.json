@@ -5,9 +5,8 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
-    "postinstall": "ng build --aot --prod",
+    "postinstall": "ng build --aot",
     "e2e": "ng e2e"
   },
   "private": true,
