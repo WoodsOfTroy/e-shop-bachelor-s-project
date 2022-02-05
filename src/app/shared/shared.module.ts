@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../material/material.module';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
@@ -16,7 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ReactiveFormsModule,
     RouterModule,
   ],
-  declarations: [HeaderComponent, FooterComponent, NotFoundComponent],
-  exports: [HeaderComponent, FooterComponent, NotFoundComponent],
+  declarations: [HeaderComponent, NotFoundComponent],
+  exports: [HeaderComponent, NotFoundComponent],
 })
 export class SharedModule {}

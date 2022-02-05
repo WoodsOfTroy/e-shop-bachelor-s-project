@@ -30,22 +30,58 @@
             <img mat-card-md-image src="{{ product.img }}" />
           </mat-card>
         </ng-container>
-        <strong>Загальна сумма: {{ totalPrice }}грн.</strong>
-        <div class="card__buttons">
-          <button mat-stroked-button class="card-btn" routerLink="">
-            Продовжити покупку
-          </button>
-          <button mat-stroked-button class="card-btn" (click)="emptyFromCard()">
-            Очистити кошик
-          </button>
-          <button
-            mat-raised-button
-            class="succusess-btn"
-            routerLink="/succusess"
-          >
-            Підтвердити замовлення
-          </button>
-        </div>
+        <form>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Ім'я</mat-label>
+            <input matInput placeholder="" value="" required />
+          </mat-form-field>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Призвіще</mat-label>
+            <input matInput placeholder="" value="" />
+          </mat-form-field>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Номер телефону</mat-label>
+            <input matInput placeholder="" value="+380" required />
+          </mat-form-field>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Вулиця доставки</mat-label>
+            <input matInput placeholder="" value="" required />
+          </mat-form-field>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Номер дому</mat-label>
+            <input matInput placeholder="" value="" required />
+          </mat-form-field>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Під'їзд</mat-label>
+            <input matInput placeholder="" value="" />
+          </mat-form-field>
+          <mat-form-field class="card__input" appearance="fill">
+            <mat-label>Код домофону</mat-label>
+            <input matInput placeholder="" value="" />
+          </mat-form-field>
+          <div class="card__total">
+            <strong>Загальна сумма: {{ totalPrice }}грн.</strong>
+          </div>
+          <div class="card__buttons">
+            <button mat-stroked-button class="card-btn" routerLink="">
+              Продовжити покупку
+            </button>
+            <button
+              mat-stroked-button
+              class="card-btn"
+              (click)="emptyFromCard()"
+            >
+              Очистити кошик
+            </button>
+            <button
+              mat-raised-button
+              class="succusess-btn"
+              routerLink="/succusess"
+            >
+              Підтвердити замовлення
+            </button>
+          </div>
+        </form>
       </div>
     </ng-container>
   </div>
