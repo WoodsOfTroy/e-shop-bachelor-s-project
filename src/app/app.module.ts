@@ -8,12 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
-// import { CardComponent } from './card/card.component';
+import { CardComponent } from './card/card.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SuccusessComponent } from './succusess/succusess.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, SuccusessComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    ProductListComponent,
+    SuccusessComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
