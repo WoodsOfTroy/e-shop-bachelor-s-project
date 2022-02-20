@@ -7,22 +7,15 @@ import { BehaviorSubject } from 'rxjs';
 export class CardLogicService {
   cartItemList: any = [];
   productList = new BehaviorSubject<any>([]);
-  search = new BehaviorSubject<string>('');
 
   constructor() {}
   getProductList() {
     return this.productList.asObservable();
   }
-
-  setProduct(product: any) {
-    this.cartItemList.push(...product);
-    this.productList.next(product);
-  }
   addProductToCard(product: any) {
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-    console.log(this.cartItemList);
   }
   getTotalPrice(): number {
     let totalPrice = 0;

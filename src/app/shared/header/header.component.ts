@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CardLogicService } from 'src/services/card-logic.service';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -19,9 +17,5 @@ export class HeaderComponent implements OnInit {
         this.totalProducts = '9+';
       }
     });
-  }
-  isCardOpen: boolean = false;
-  cardOpen() {
-    this.isCardOpen = !this.isCardOpen;
   }
 }
